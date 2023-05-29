@@ -16,6 +16,7 @@
 }
 
 .nomePagina{
+  align-content : center;
   top: 27%;
   left: 25%;
   position: absolute;

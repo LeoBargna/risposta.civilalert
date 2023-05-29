@@ -187,7 +187,7 @@ select{
 .bottone{
   background-color: #006DB6;
   align-items: center;
-  position: absolute;
+  position: fixed;
   width: auto;
   border-radius: 15px;
   border-width: 2px;
