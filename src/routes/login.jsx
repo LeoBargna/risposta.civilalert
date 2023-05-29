@@ -14,7 +14,9 @@ function Login() {
   
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
-  const [utente, setUtente] = useState([])
+  const [utente, setUtente] = useState([]);
+  
+  var indirizzo = "";
 
   const styles = theme => ({
     textField: {
@@ -34,7 +36,7 @@ function GetPar()
 {
   var queryString = window.location.search;
   var urlParams = new URLSearchParams(queryString);
-  var indirizzo = urlParams.get('ind')
+  indirizzo = urlParams.get('ind')
   console.log(indirizzo);
 }
 GetPar();
