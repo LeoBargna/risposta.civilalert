@@ -1,5 +1,5 @@
 .tutto{
-  background: white;
+  background-color: white;
 }
 
 .informazioni
@@ -46,8 +46,8 @@
 }
 
 .risposta{
-  position: absolute;
-  top: 40%;
+  position: fixed;
+  top: 20%;
   width: 90%;
   display: flex;
   left: 50%;

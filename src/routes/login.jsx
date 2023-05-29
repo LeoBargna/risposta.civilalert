@@ -32,14 +32,6 @@ function Login() {
     }
 });
 
-function GetPar()
-{
-  var queryString = window.location.search;
-  var urlParams = new URLSearchParams(queryString);
-  indirizzo = urlParams.get('ind')
-  console.log(indirizzo);
-}
-GetPar();
 
 const handleClick = async e => {
   e.preventDefault()
@@ -67,8 +59,6 @@ const handleClick = async e => {
           }
       );
   }
-
-  
 
   const handleChangeUser = (event) => {
     setUser(event.target.value);
