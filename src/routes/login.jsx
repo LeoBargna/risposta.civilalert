@@ -3,32 +3,18 @@ import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
 import logoPC from '../assets/logo.png'
 import '../css/login.css'
-import axios from "axios"
+import { useNavigate } from "react-router-dom";
+import MD5 from 'crypto-js/md5'
+import axios from 'axios'
+
 
 function Login() {
 
+  const [error, setError] = useState(0);
+  
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(0);
-
-  /*function GetPar()
-  {
-    var queryString = window.location.search;
-    var urlParams = new URLSearchParams(queryString);
-    var indirizzo = urlParams.get('ind')
-    var emergenza = urlParams.get('eme')
-    var tipo = urlParams.get('tip')
-    console.log(id + indirizzo + emergenza);
-  }
-  GetPar();*/
-
-  const handleClick = async e => {
-    e.preventDefault()
-      await axios.get("https://protezione-civile-server.onrender.com/accessoTenda")
-        .then(
-            (res)=>{res.data[user]==password?navigate("./attivazione/?ind="+indirizzo+"&tip="+tipologia+"&eme="+emergenza):setError(1)}
-        );
-  }
+  const [utente, setUtente] = useState([])
 
   const styles = theme => ({
     textField: {
@@ -42,7 +28,46 @@ function Login() {
     input: {
         color: 'white'
     }
-  });
+});
+
+  const handleClick = async e => {
+    e.preventDefault()
+      /*await axios.get("https://protezione-civile-server.onrender.com/accessoTenda")
+        .then(
+            (res)=>{res.data[user]==password?navigate("./segnalazione"):setError(1)}
+        );*/
+      await axios.get("https://protezione-civile-server.onrender.com/accessoTenda")
+        .then(
+            (res)=>{
+                // res.data[user]==MD5(pw)?navigate("../show?user="+user):setError(1)
+                if(
+                    MD5(password).words[0] == res.data[user].words[0]&&
+                    MD5(password).words[1] == res.data[user].words[1]&&
+                    MD5(password).words[2] == res.data[user].words[2]&&
+                    MD5(password).words[3] == res.data[user].words[3]
+                )
+                {
+                    navigate("./attivazione")
+                }
+                else
+                {
+                  setError(1)
+                }
+            }
+        );
+  }
+
+  
+
+  const handleChangeUser = (event) => {
+    setUser(event.target.value);
+  }
+
+  const handleChangePw = (event) => {
+    setPassword(event.target.value);
+  }
+
+  const navigate = useNavigate()
 
   return (
 
@@ -54,13 +79,13 @@ function Login() {
 
       <fieldset className = "form">
         <legend>Login</legend>
-        <input className="input" type="text" name='user' placeholder='username'/>
-        <input className="input" type="password" name='password' placeholder='password'/>
+        <input className="input" type="text" name='user' placeholder='username' onChange={handleChangeUser}/>
+        <input className="input" type="password" name='password' placeholder='password' onChange={handleChangePw}/>
       </fieldset>
 
       <div>
-        <form action="attivazione">
-          <button type="submit" className='bottone-login' onClick={handleClick}>
+        <form>
+          <button type="submit" onClick={handleClick} className='bottone-login'>
             ACCEDI
           </button>  
         </form> 

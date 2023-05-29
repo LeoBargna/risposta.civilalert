@@ -25,7 +25,7 @@ GetPar();*/
 
 function Attivazione(){
 
-  const evento = emergenza + "-" + tipo  
+  //const evento = emergenza + "-" + tipo  
 
   const [giornoInizio, setGiornoInizio] = useState("")
   const [giornoFine, setGiornoFine] = useState("")
@@ -66,13 +66,13 @@ function Attivazione(){
 
       <div className="informazioni">
         <div className="indirizzo">
-          <p>{coordinate}</p>
+          <p>{}</p>
         </div>
         <div className="maps">
           <img src={logo_maps} width="100"/>
         </div>
         <div className="evento">
-          <p>Evento: {evento}</p>
+          <p>Evento: {}</p>
         </div>
        
         
