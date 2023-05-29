@@ -17,16 +17,16 @@ import "../css/attivazione.css"
 function Attivazione(){
   
   var indirizzo = "";
-  function GetPar()
+  /*function GetPar()
     {
       var queryString = window.location.search;
       var urlParams = new URLSearchParams(queryString);
       var indirizzo = urlParams.get('ind')
       console.log(indirizzo);
-      var p = document.getElementById("content")
-      p.innerHTML = indirizzo
+      //var p = document.getElementById("content")
+      //p.innerHTML = indirizzo
     }
-  GetPar();
+  GetPar();*/
   //const evento = emergenza + "-" + tipo  
 
   const [giornoInizio, setGiornoInizio] = useState("")
@@ -66,16 +66,6 @@ function Attivazione(){
 
       <div className="titolo">
         <Titolo nomePagina={"Risposta"} />
-      </div>
-
-      <div className="informazioni">
-        <div className="indirizzo">
-          <p id="content"></p>
-        </div>
-      </div>
-
-      <div className="linea">
-        <hr width="100%" size="2" color="#FF6600"/>
       </div>
       
       <div className="risposta">
@@ -135,9 +125,6 @@ function Attivazione(){
               placeholder='Inserisci un nome personalizzato'/> 
           </div>  
         </form>
-      </div>
-      <div className="linea2">
-        <hr width="100%" size="2" color="#FF6600"/>
       </div>
       <input type="submit" className="bottone" value="CONFERMA RISPOSTA" onClick={handleSubmit}/>  
     </div>
