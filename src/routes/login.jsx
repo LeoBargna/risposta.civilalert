@@ -30,31 +30,40 @@ function Login() {
     }
 });
 
-  const handleClick = async e => {
-    e.preventDefault()
-      /*await axios.get("https://protezione-civile-server.onrender.com/accessoTenda")
-        .then(
-            (res)=>{res.data[user]==password?navigate("./segnalazione"):setError(1)}
-        );*/
-      await axios.get("https://protezione-civile-server.onrender.com/accessoTenda")
-        .then(
-            (res)=>{
-                // res.data[user]==MD5(pw)?navigate("../show?user="+user):setError(1)
-                if(
-                    MD5(password).words[0] == res.data[user].words[0]&&
-                    MD5(password).words[1] == res.data[user].words[1]&&
-                    MD5(password).words[2] == res.data[user].words[2]&&
-                    MD5(password).words[3] == res.data[user].words[3]
-                )
-                {
-                    navigate("./attivazione")
-                }
-                else
-                {
-                  setError(1)
-                }
-            }
-        );
+function GetPar()
+{
+  var queryString = window.location.search;
+  var urlParams = new URLSearchParams(queryString);
+  var indirizzo = urlParams.get('ind')
+  console.log(indirizzo);
+}
+GetPar();
+
+const handleClick = async e => {
+  e.preventDefault()
+    /*await axios.get("https://protezione-civile-server.onrender.com/accessoTenda")
+      .then(
+          (res)=>{res.data[user]==password?navigate("./segnalazione"):setError(1)}
+      );*/
+    await axios.get("https://protezione-civile-server.onrender.com/accessoTenda")
+      .then(
+          (res)=>{
+              // res.data[user]==MD5(pw)?navigate("../show?user="+user):setError(1)
+              if(
+                  MD5(password).words[0] == res.data[user].words[0]&&
+                  MD5(password).words[1] == res.data[user].words[1]&&
+                  MD5(password).words[2] == res.data[user].words[2]&&
+                  MD5(password).words[3] == res.data[user].words[3]
+              )
+              {
+                  navigate("./attivazione/?ind="+indirizzo)
+              }
+              else
+              {
+                setError(1)
+              }
+          }
+      );
   }
 
   

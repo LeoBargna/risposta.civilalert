@@ -12,16 +12,14 @@ import logo_maps from "../assets/logo_maps.png";
 import "../css/attivazione.css"
 
 
-/*function GetPar()
+function GetPar()
   {
     var queryString = window.location.search;
     var urlParams = new URLSearchParams(queryString);
     var indirizzo = urlParams.get('ind')
-    var emergenza = urlParams.get('eme')
-    var tipo = urlParams.get('tip')
-    console.log(id);
+    console.log(indirizzo);
   }
-GetPar();*/
+GetPar();
 
 function Attivazione(){
 
@@ -66,16 +64,8 @@ function Attivazione(){
 
       <div className="informazioni">
         <div className="indirizzo">
-          <p>{}</p>
+          <p>{indirizzo}</p>
         </div>
-        <div className="maps">
-          <img src={logo_maps} width="100"/>
-        </div>
-        <div className="evento">
-          <p>Evento: {}</p>
-        </div>
-       
-        
       </div>
 
       <div className="linea">
