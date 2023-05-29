@@ -23,6 +23,8 @@ function Attivazione(){
       var urlParams = new URLSearchParams(queryString);
       var indirizzo = urlParams.get('ind')
       console.log(indirizzo);
+      var p = document.getElementById("content")
+      p.innerHTML = indirizzo
     }
   GetPar();
   //const evento = emergenza + "-" + tipo  
@@ -56,6 +58,8 @@ function Attivazione(){
     navigate("/conferma");
   }
 
+  
+
   return(
 
     <div className="tutto">
@@ -66,7 +70,7 @@ function Attivazione(){
 
       <div className="informazioni">
         <div className="indirizzo">
-          <p>{indirizzo}</p>
+          <p id="content"></p>
         </div>
       </div>
 
