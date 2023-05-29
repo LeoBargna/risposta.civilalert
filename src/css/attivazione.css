@@ -1,0 +1,217 @@
+.informazioni
+{
+  top: 14%;
+  position: absolute;
+  width: 90%;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.indirizzo{
+  margin-top: 4%;
+  position: absolute;
+  display: flex;
+  width: 60%;
+}
+
+.maps{
+  margin-left: 65%;
+  display: flex;
+}
+
+.linea{
+  position: absolute;
+  top: 35%;
+  width: 100%;
+}
+
+.linea2{
+  position: absolute;
+  top: 84%;
+  width: 100%;
+}
+
+
+.evento{
+  position: absolute;
+  margin-top: 30%;
+}
+
+.risposta{
+  position: absolute;
+  top: 40%;
+  width: 90%;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.input1{
+  background-color: #eee ;
+  left: 0%;
+  width: 108%;
+  align-items: center;
+  text-align: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  margin-bottom: 13px;
+  margin-left: 0%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  border-color: #FF6600;
+  border-width: 1px;
+  color: black;
+}
+
+.input2{
+  background-color: #eee ;
+  left: 0%;
+  width: 91%;
+  align-items: center;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  margin-bottom: 13px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  border-color: #FF6600;
+  border-width: 1px;
+  color: black;
+}
+
+.legenda{
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+}
+
+.giorni{
+  margin-top: 20%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+
+.fine{
+  margin-top: 12%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  width: 40%;
+  margin-left: 0%;
+}
+
+.inizio{
+  position: absolute;
+  margin-top: 12%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  margin-left: 50%;
+  width: 40%;
+}
+
+
+.legendaGiorni{
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+}
+
+.container {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.containerOrari {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 55%
+}
+
+select{
+  margin-left: 4%;
+  margin-top: 2%;
+  position: absolute;
+  background-color: #eee;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  border: #FF6600 solid 1px;
+  border-radius: 5px;
+}
+
+.bottone{
+  background-color: #006DB6;
+  align-items: center;
+  position: absolute;
+  width: auto;
+  border-radius: 15px;
+  border-width: 2px;
+  border-color: #FF6600;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 84%;
+}
+
+.nome{
+  position: absolute;
+  margin-top: 72%;
+  width: 100%;
+}
+
+.legendaOrari{
+  font-family: 'Inter', sans-serif;
+  width: auto;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  display: flex;
+}
