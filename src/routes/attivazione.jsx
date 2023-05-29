@@ -16,12 +16,12 @@ import "../css/attivazione.css"
 
 function Attivazione(){
   
-  var nome = "";
+  var nome;
   function GetId()
   {
     var queryString = window.location.search;
     var urlParams = new URLSearchParams(queryString);
-    var nome = urlParams.get('nome')
+    nome = urlParams.get('nome')
     console.log(nome);
   }
   GetId();
