@@ -12,7 +12,7 @@ import logo_maps from "../assets/logo_maps.png";
 import "../css/attivazione.css"
 
 
-function GetPar()
+/*function GetPar()
   {
     var queryString = window.location.search;
     var urlParams = new URLSearchParams(queryString);
@@ -21,7 +21,7 @@ function GetPar()
     var tipo = urlParams.get('tip')
     console.log(id);
   }
-GetPar();
+GetPar();*/
 
 function Attivazione(){
 

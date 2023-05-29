@@ -3,14 +3,15 @@ import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
 import logoPC from '../assets/logo.png'
 import '../css/login.css'
-
+import axios from "axios"
 
 function Login() {
 
-  const [email, setEmail] = useState("");
+  const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(0);
 
-  function GetPar()
+  /*function GetPar()
   {
     var queryString = window.location.search;
     var urlParams = new URLSearchParams(queryString);
@@ -19,7 +20,7 @@ function Login() {
     var tipo = urlParams.get('tip')
     console.log(id + indirizzo + emergenza);
   }
-  GetPar();
+  GetPar();*/
 
   const handleClick = async e => {
     e.preventDefault()
@@ -53,7 +54,7 @@ function Login() {
 
       <fieldset className = "form">
         <legend>Login</legend>
-        <input className="input" type="text" name='nomeUtente' placeholder='username'/>
+        <input className="input" type="text" name='user' placeholder='username'/>
         <input className="input" type="password" name='password' placeholder='password'/>
       </fieldset>
 
