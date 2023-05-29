@@ -50,7 +50,7 @@ const handleClick = async e => {
                   MD5(password).words[3] == res.data[user].words[3]
               )
               {
-                  navigate("./attivazione/?nome="+utente+"")
+                  navigate("./attivazione/?nome="+user+"")
               }
               else
               {
