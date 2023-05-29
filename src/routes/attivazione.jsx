@@ -58,7 +58,7 @@ function Attivazione(){
 
   return(
 
-    <div>
+    <div className="tutto">
 
       <div className="titolo">
         <Titolo nomePagina={"Risposta"} />
