@@ -16,7 +16,15 @@ import "../css/attivazione.css"
 
 function Attivazione(){
   
-  var indirizzo = "";
+  var nome = "";
+  function GetId()
+  {
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    var nome = urlParams.get('nome')
+    console.log(nome);
+  }
+  GetId();
   /*function GetPar()
     {
       var queryString = window.location.search;
@@ -55,7 +63,7 @@ function Attivazione(){
   }
 
   const handleSubmit = (event) => {
-    navigate("/conferma");
+    navigate("/conferma/?nome="+nome);
   }
 
   

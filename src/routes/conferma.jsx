@@ -13,6 +13,16 @@ import "../css/conferma.css"
 function Conferma()
 {
 
+  var nome = "";
+  function GetId()
+  {
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    nome = urlParams.get('nome')
+    console.log(nome);
+  }
+  GetId();
+
   return(
     <div>
       <div className="messaggio">
@@ -20,7 +30,7 @@ function Conferma()
       </div>
       <img src={freccia} className="freccia"/>
       <div className="qrcode">
-        <QRCode value="id"/>
+        <QRCode value={nome}/>
           <p align="center">Mostra questo codice identificativo univoco all’hub di protezione civile</p>
       </div>
     </div>
