@@ -12,17 +12,19 @@ import logo_maps from "../assets/logo_maps.png";
 import "../css/attivazione.css"
 
 
-function GetPar()
-  {
-    var queryString = window.location.search;
-    var urlParams = new URLSearchParams(queryString);
-    var indirizzo = urlParams.get('ind')
-    console.log(indirizzo);
-  }
-GetPar();
+
 
 function Attivazione(){
-
+  
+  var indirizzo = "";
+  function GetPar()
+    {
+      var queryString = window.location.search;
+      var urlParams = new URLSearchParams(queryString);
+      var indirizzo = urlParams.get('ind')
+      console.log(indirizzo);
+    }
+  GetPar();
   //const evento = emergenza + "-" + tipo  
 
   const [giornoInizio, setGiornoInizio] = useState("")
